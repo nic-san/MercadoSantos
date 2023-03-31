@@ -4,11 +4,11 @@ using MercadoSantos.Models;
 
 namespace MercadoSantos.Controllers;
 
-public class HomeController : Controller
+public class FrenteDeCaixa : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ILogger<FrenteDeCaixa> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public FrenteDeCaixa(ILogger<FrenteDeCaixa> logger)
     {
         _logger = logger;
     }
