@@ -1,0 +1,28 @@
+@model MercadoSantos.DTO.EstoqueDTO
+@{
+    Layout = "_LayoutAdm";
+}
+<h2>Editar estoque</h2>
+<hr />
+<form class="form-horizontal" asp-controller="Estoques" asp-action="Atualizar" method="POST">
+    <div>
+        <input type="hidden" asp-for="Id">
+        <label for="Nome">Nome</label>
+        <input type="text" class="form-control" asp-for="Nome" placeholder="Nome">
+        <span asp-validation-for="Nome"></span>
+    </div><br>
+    <div>
+        <label for="ProdutoID">Produto</label>
+        <select class="form-control" asp-for="ProdutoID"
+            asp-items='@(new SelectList(@ViewBag.Produtos,"Id","Nome"))'></select>
+        <span asp-validation-for="ProdutoID"></span>
+    </div><br>
+    <div>
+        <label for="Quantidade">Quantidade</label>
+        <input type="number" class="form-control" asp-for="Quantidade" placeholder="1,2,3...">
+        <span asp-validation-for="Quantidade"></span>
+    </div><br>
+    <div>
+        <button class="btn btn-success">Atualizar</button>
+    </div>
+</form>
