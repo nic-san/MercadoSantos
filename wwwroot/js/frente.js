@@ -164,4 +164,5 @@ function restaurarModal() {
 
 $("#fecharModal").click(function () {
     restaurarModal();
+    zerarFormulario();
 });
